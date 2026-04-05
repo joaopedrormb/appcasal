@@ -1,0 +1,35 @@
+.screen {
+  display: grid;
+  gap: 16px;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.alerts,
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.alert {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+
+.alert span {
+  color: var(--muted);
+}
+
+.danger {
+  background: rgba(239, 68, 68, 0.14);
+}
+
+.warn {
+  background: rgba(245, 158, 11, 0.14);
+}

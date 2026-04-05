@@ -1,0 +1,42 @@
+.nav {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(12px + env(safe-area-inset-bottom));
+  z-index: 30;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  min-height: calc(64px + env(safe-area-inset-bottom));
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(10, 16, 32, 0.92);
+  backdrop-filter: blur(20px);
+}
+
+.item {
+  display: grid;
+  gap: 6px;
+  place-items: center;
+  color: var(--muted);
+  background: transparent;
+  border-radius: 18px;
+}
+
+.active {
+  color: var(--accent);
+  background: rgba(124, 92, 255, 0.12);
+}
+
+.active::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.item span {
+  font-size: 0.74rem;
+}

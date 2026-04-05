@@ -9,5 +9,13 @@ export function formatPercent(value, locale = 'pt-BR') {
   return new Intl.NumberFormat(locale, {
     style: 'percent',
     maximumFractionDigits: 0
-  }).format((Number(value) || 0) / 100)
+  }).format(Number(value) || 0)
+}
+
+export function formatNumber(value, locale = 'pt-BR') {
+  return new Intl.NumberFormat(locale).format(Number(value) || 0)
+}
+
+export function cleanText(value) {
+  return String(value ?? '').trim()
 }

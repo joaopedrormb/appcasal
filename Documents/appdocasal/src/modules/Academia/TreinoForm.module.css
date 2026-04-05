@@ -1,0 +1,54 @@
+.form,
+.exerciseList {
+  display: grid;
+  gap: 14px;
+}
+
+.exercise {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.add,
+.remove,
+.save,
+.delete {
+  min-height: 42px;
+  border-radius: 14px;
+}
+
+.add,
+.remove {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.save,
+.delete {
+  flex: 1;
+}
+
+.save {
+  color: white;
+  background: linear-gradient(135deg, #7c5cff, #6047ff);
+}
+
+.delete {
+  color: white;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}

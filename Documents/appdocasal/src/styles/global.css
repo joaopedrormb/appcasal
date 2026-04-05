@@ -1,0 +1,142 @@
+:root {
+  --bg: #0b1020;
+  --bg-soft: #12182b;
+  --card: rgba(255, 255, 255, 0.07);
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #eef3ff;
+  --muted: #8a96b5;
+  --accent: #7c5cff;
+  --accent2: #22d3ee;
+  --good: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --radius: 16px;
+  --font: 'Sora', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font);
+  background:
+    radial-gradient(circle at top left, rgba(124, 92, 255, 0.36), transparent 38%),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.26), transparent 28%),
+    var(--bg);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+input,
+select {
+  min-height: 44px;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+progress {
+  width: 100%;
+}
+
+.surface-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+  backdrop-filter: blur(10px);
+}
+
+.primary-button {
+  color: white;
+  background: linear-gradient(135deg, #7c5cff, #6047ff);
+  box-shadow: 0 6px 20px rgba(124, 92, 255, 0.3);
+}
+
+.ghost-button {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+}
+
+.danger-button {
+  color: white;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid transparent;
+}
+
+.chip-active {
+  color: white;
+  border-color: rgba(124, 92, 255, 0.4);
+  background: rgba(124, 92, 255, 0.2);
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.field textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.muted {
+  color: var(--muted);
+}

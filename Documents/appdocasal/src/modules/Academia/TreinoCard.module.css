@@ -1,0 +1,128 @@
+.card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--text);
+  background: transparent;
+}
+
+.headerMain {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.emoji {
+  font-size: 1.4rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(124, 92, 255, 0.18);
+}
+
+.muay-thai {
+  background: rgba(124, 92, 255, 0.18);
+}
+
+.kickboxing {
+  background: rgba(239, 68, 68, 0.18);
+}
+
+.musculao {
+  background: rgba(34, 211, 238, 0.18);
+}
+
+.cardio {
+  background: rgba(34, 197, 94, 0.18);
+}
+
+.glteo {
+  background: rgba(244, 114, 182, 0.18);
+}
+
+.pernas {
+  background: rgba(249, 115, 22, 0.18);
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
+.body {
+  display: grid;
+  gap: 12px;
+}
+
+.exercise {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.exercise p,
+.exercise em {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.loadField {
+  display: grid;
+  gap: 8px;
+  min-width: 96px;
+}
+
+.loadField input {
+  width: 100%;
+  padding: 10px 12px;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer {
+  display: flex;
+  gap: 12px;
+}
+
+.primary,
+.secondary {
+  flex: 1;
+  min-height: 44px;
+  border-radius: 14px;
+}
+
+.primary {
+  color: white;
+  background: linear-gradient(135deg, #7c5cff, #6047ff);
+}
+
+.secondary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}

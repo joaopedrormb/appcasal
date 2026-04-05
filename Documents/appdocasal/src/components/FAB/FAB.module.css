@@ -1,0 +1,12 @@
+.fab {
+  position: fixed;
+  right: 20px;
+  bottom: 88px;
+  z-index: 25;
+  width: 56px;
+  min-height: 56px;
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(135deg, #7c5cff, #6047ff);
+  box-shadow: 0 12px 26px rgba(124, 92, 255, 0.45);
+}

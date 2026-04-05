@@ -1,0 +1,29 @@
+.empty {
+  display: grid;
+  gap: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.emoji {
+  font-size: 2.4rem;
+}
+
+.empty h2,
+.empty p {
+  margin: 0;
+}
+
+.empty p {
+  color: var(--muted);
+}
+
+.action {
+  min-height: 46px;
+  border-radius: 14px;
+  color: white;
+  background: linear-gradient(135deg, #7c5cff, #6047ff);
+}

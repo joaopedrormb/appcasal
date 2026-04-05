@@ -1,0 +1,29 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.ok {
+  color: #d9ffe7;
+  background: rgba(34, 197, 94, 0.18);
+}
+
+.warn {
+  color: #ffe9c2;
+  background: rgba(245, 158, 11, 0.18);
+}
+
+.danger {
+  color: #ffd4d4;
+  background: rgba(239, 68, 68, 0.18);
+}
+
+.info {
+  color: #d5e8ff;
+  background: rgba(34, 211, 238, 0.18);
+}

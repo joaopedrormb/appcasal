@@ -1,0 +1,40 @@
+.banner {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(124, 92, 255, 0.12));
+}
+
+.banner p,
+.banner strong {
+  margin: 0;
+}
+
+.banner p {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.primary,
+.secondary {
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 14px;
+}
+
+.primary {
+  color: white;
+  background: linear-gradient(135deg, #7c5cff, #6047ff);
+}
+
+.secondary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}

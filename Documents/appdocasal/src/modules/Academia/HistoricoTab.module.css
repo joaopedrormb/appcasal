@@ -1,0 +1,57 @@
+.tab,
+.summary,
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.summary,
+.item {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.summary p,
+.item span {
+  margin: 0;
+  color: var(--muted);
+}
+
+.summaryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dotOn,
+.dotOff {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dotOn {
+  background: var(--good);
+}
+
+.dotOff {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.meta {
+  text-align: right;
+}
