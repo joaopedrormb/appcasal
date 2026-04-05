@@ -8,10 +8,14 @@ function readTargetFile(path) {
     return readFileSync(path, 'utf8')
   }
 
-  return execFileSync('git', ['show', `${ref}:${path}`], { encoding: 'utf8' })
+  try {
+    return execFileSync('git', ['show', `${ref}:${path}`], { encoding: 'utf8' })
+  } catch {
+    return ''
+  }
 }
 
-const pkg = JSON.parse(readTargetFile('package.json'))
+const pkg = JSON.parse(readTargetFile('package.json') || '{}')
 const vite = readTargetFile('vite.config.js')
 const html = readTargetFile('index.html')
 const firebaseJson = readTargetFile('firebase.json')
