@@ -2,14 +2,17 @@ import { readFileSync } from 'node:fs'
 import { spawnSync } from 'node:child_process'
 
 const ref = process.argv[2]
+const repoPrefix = ref ? spawnSync('git', ['rev-parse', '--show-prefix'], { encoding: 'utf8' }).stdout.trim() : ''
 
 function readTargetFile(path) {
   if (!ref) {
     return readFileSync(path, 'utf8')
   }
 
+  const repoRelativePath = repoPrefix ? `${repoPrefix}${path}`.replace(/\\/g, '/') : path
+
   try {
-    const result = spawnSync('git', ['show', `${ref}:${path}`], { encoding: 'utf8' })
+    const result = spawnSync('git', ['show', `${ref}:${repoRelativePath}`], { encoding: 'utf8' })
 
     return result.status === 0 ? result.stdout : ''
   } catch {
