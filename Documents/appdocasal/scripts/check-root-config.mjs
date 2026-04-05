@@ -1,9 +1,20 @@
 import { readFileSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
 
-const pkg = JSON.parse(readFileSync('package.json', 'utf8'))
-const vite = readFileSync('vite.config.js', 'utf8')
-const html = readFileSync('index.html', 'utf8')
-const firebaseJson = readFileSync('firebase.json', 'utf8')
+const ref = process.argv[2]
+
+function readTargetFile(path) {
+  if (!ref) {
+    return readFileSync(path, 'utf8')
+  }
+
+  return execFileSync('git', ['show', `${ref}:${path}`], { encoding: 'utf8' })
+}
+
+const pkg = JSON.parse(readTargetFile('package.json'))
+const vite = readTargetFile('vite.config.js')
+const html = readTargetFile('index.html')
+const firebaseJson = readTargetFile('firebase.json')
 
 if (pkg.name !== 'nossa-casa') throw new Error('package name mismatch')
 if (!vite.includes('VitePWA')) throw new Error('missing vite pwa plugin')
