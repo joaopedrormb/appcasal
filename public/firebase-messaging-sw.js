@@ -2,12 +2,12 @@ importScripts('https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js'
 importScripts('https://www.gstatic.com/firebasejs/11.6.1/firebase-messaging-compat.js')
 
 firebase.initializeApp({
-  apiKey: 'COLE_AQUI',
-  authDomain: 'COLE_AQUI',
-  projectId: 'COLE_AQUI',
-  storageBucket: 'COLE_AQUI',
-  messagingSenderId: 'COLE_AQUI',
-  appId: 'COLE_AQUI'
+  apiKey: 'AIzaSyCdJnx3dYake7jEc7Htfa38sALi4RfOYFw',
+  authDomain: 'controle-de-remedios-c1378.firebaseapp.com',
+  projectId: 'controle-de-remedios-c1378',
+  storageBucket: 'controle-de-remedios-c1378.firebasestorage.app',
+  messagingSenderId: '449905516600',
+  appId: '1:449905516600:web:e5a9833d7537fdaae906cd'
 })
 
 const messaging = firebase.messaging()
