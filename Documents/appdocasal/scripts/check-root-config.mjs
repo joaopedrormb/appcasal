@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs'
-import { execFileSync } from 'node:child_process'
+import { spawnSync } from 'node:child_process'
 
 const ref = process.argv[2]
 
@@ -9,7 +9,9 @@ function readTargetFile(path) {
   }
 
   try {
-    return execFileSync('git', ['show', `${ref}:${path}`], { encoding: 'utf8' })
+    const result = spawnSync('git', ['show', `${ref}:${path}`], { encoding: 'utf8' })
+
+    return result.status === 0 ? result.stdout : ''
   } catch {
     return ''
   }
