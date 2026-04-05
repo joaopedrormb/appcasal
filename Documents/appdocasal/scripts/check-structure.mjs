@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs'
+import { existsSync, statSync } from 'node:fs'
 
 const required = [
   'src/App.jsx',
@@ -39,10 +39,21 @@ const scaffoldDirs = [
   'src/modules/Academia'
 ]
 
+const forbidden = [
+  'config.js',
+  'index.js',
+  'functions-index.js',
+  'sw.js',
+  'manifest.json',
+  'firebase-messaging-sw.js',
+  'treinos-seed.js',
+  'useFirestore.js'
+]
+
 const missing = []
 
 for (const dir of scaffoldDirs) {
-  if (!existsSync(dir)) {
+  if (!existsSync(dir) || !statSync(dir).isDirectory()) {
     missing.push(`missing dir: ${dir}`)
   }
 }
@@ -50,6 +61,12 @@ for (const dir of scaffoldDirs) {
 for (const file of required) {
   if (!existsSync(file)) {
     missing.push(`missing: ${file}`)
+  }
+}
+
+for (const file of forbidden) {
+  if (existsSync(file)) {
+    missing.push(`forbidden: ${file}`)
   }
 }
 
